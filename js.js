@@ -17,9 +17,6 @@ button.addEventListener("click", function ajouterTache() {
         for (let i = 0; i < listeDeTaches.length; i++) {
             let li=taskList.appendChild(document.createElement("li"))
             li.textContent=input.value
-            // console.log("console listeDeTaches : ", listeDeTaches[i]);
-            // li.textContent=listeDeTaches[i]
-
             listeDeTaches.push([input.value])
             console.log("console listeDeTaches  : ", listeDeTaches);
             return
