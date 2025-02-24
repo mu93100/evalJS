@@ -6,30 +6,30 @@ let taskList=document.getElementById("taskList") // ul
 
 input.value=""
 
-let listeDeTaches=["i", "i++"]// pourquoi ? jamais vu en cours, pas un tableau vide mais 2 chaines de caractère  0
+let listeDeTaches=[]// pourquoi ? jamais vu en cours, pas un tableau vide mais 2 chaines de caractère  0
 
 console.log(listeDeTaches);// que vois tu?
 
 
 button.addEventListener("click",  ajouterTache) // syntaxe correct
     
-
+ 
 
 
 function ajouterTache(){
                                                                                         
     console.log("val input : " + input.value);
-        
+    
     for (let i = 0; i < listeDeTaches.length; i++) {
-        listeDeTaches.push([input.value])// tu as push un nouveau tableau avec les [] resultat tableau imbriqué au lieu d'ajouter chaine de caractère
-        console.log("console listeDeTaches  : ", listeDeTaches);// que vois tu?
-        affichertache()
-        return// pourquoi? inutile ici
+        listeDeTaches.push(input.value)// tu as push un nouveau tableau avec les [] resultat tableau imbriqué au lieu d'ajouter chaine de caractère
+        // return// pourquoi? inutile ici
     }
-
+    affichertache()
+    
 }
 
 function affichertache(){
+    console.log("console listeDeTaches  : ", listeDeTaches);// que vois tu?
 
     let li=taskList.appendChild(document.createElement("li"))                            
     li.textContent=input.value
